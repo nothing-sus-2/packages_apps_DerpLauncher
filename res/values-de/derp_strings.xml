@@ -147,4 +147,8 @@
     <!-- Scroll Vibration -->
     <string name="pref_scroll_vibration_title">Scroll-Vibration</string>
     <string name="pref_scroll_vibration_summary">Haptisches Feedback beim Scrollen durch aktuelle Apps, sofern unterstützt</string>
+
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Tastaturautomatik</string>
+    <string name="pref_auto_keyboard_summary">Suche direkt starten, sobald die App-Übersicht geöffnet ist</string>
 </resources>

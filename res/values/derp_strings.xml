@@ -184,4 +184,7 @@
     <!-- LMOFreeform -->
     <string name="floating_window">Floating</string>
 
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
 </resources>
