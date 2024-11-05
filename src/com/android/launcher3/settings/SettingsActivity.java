@@ -66,13 +66,10 @@ public class SettingsActivity extends FragmentActivity
         setContentView(R.layout.settings_activity);
 
         setActionBar(findViewById(R.id.action_bar));
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
         Intent intent = getIntent();
-        if (intent.hasExtra(EXTRA_FRAGMENT_ROOT_KEY) || intent.hasExtra(EXTRA_FRAGMENT_ARGS)
-                || intent.hasExtra(EXTRA_FRAGMENT_HIGHLIGHT_KEY)) {
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         if (savedInstanceState == null) {
             Bundle args = intent.getBundleExtra(EXTRA_FRAGMENT_ARGS);
@@ -160,8 +157,8 @@ public class SettingsActivity extends FragmentActivity
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
             setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
 
-            if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
-                getActivity().setTitle(getPreferenceScreen().getTitle());
+            if (getActivity() != null) {
+                getActivity().setTitle(null);
             }
         }
 
