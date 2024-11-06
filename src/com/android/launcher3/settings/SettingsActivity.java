@@ -158,7 +158,7 @@ public class SettingsActivity extends FragmentActivity
             setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
 
             if (getActivity() != null) {
-                getActivity().setTitle(null);
+                getActivity().setTitle(getString(R.string.settings_title));
             }
         }
 
