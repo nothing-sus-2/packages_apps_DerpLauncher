@@ -172,6 +172,7 @@ public final class Utilities {
     public static final String KEY_SINGLE_PAGE_CENTER = "pref_single_page_center";
     public static final String KEY_FORCE_MONOCHROME_ICONS = "pref_forced_monochrome_icons";
     public static final String KEY_RECENTS_MEMINFO = "pref_recents_meminfo";
+    public static final String KEY_ALLOW_WALLPAPER_ZOOMING = "pref_allow_wallpaper_zooming";
 
     /**
      * Returns true if theme is dark.
@@ -923,4 +924,9 @@ public final class Utilities {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_RECENTS_MEMINFO, false);
    }
+
+   public static boolean canZoomWallpaper(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_ALLOW_WALLPAPER_ZOOMING, true);
+    }
 }
